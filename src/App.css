@@ -1,0 +1,107 @@
+body {
+  font-family: 'Amatic SC', cursive;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: bisque;
+}
+
+.naglowek {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 0 15%;
+}
+
+.ustawienia {
+  padding: 2rem;
+}
+
+.ustaw-kalfe {
+  margin: 1rem 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.runda {
+  font-size: 4rem;
+}
+
+.ile-rund {
+  font-size: 1.2rem;
+}
+
+.ile-kafli {
+  font-size: 1.2rem;
+}
+
+.punkty {
+  color: #9434bb;
+  font-size: 2rem;
+}
+
+.plansza {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 3rem 0;
+  width: 70%;
+}
+
+.pole {
+  background-color: transparent;
+  color: #61dafb;
+  flex-basis: 30%;
+  height: 12rem;
+  text-align: center;
+  font-size: 9rem;
+  margin: 1rem;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.pole .flip {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s ease-out;
+  transform-style: preserve-3d;
+}
+
+.pole.obroc .flip {
+  transform: rotateY(540deg);
+}
+
+.pole .zaslona,
+.pole .przedmiot {
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.pole .zaslona {
+  background: #282c34;
+}
+
+.pole .zaslona:hover {
+  background: #394356;
+}
+
+.pole .przedmiot {
+  transform: rotateY(180deg);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.pole .przedmiot img {
+  display: block;
+  width: auto;
+  height: 100%;
+}
